@@ -45,7 +45,7 @@ function SortableSong({ song, index, onRemove }) {
         marginBottom: '0.5rem',
       }}
     >
-      <button {...attributes} {...listeners} style={{ cursor: 'grab', background: 'none', border: 'none', color: 'var(--text-secondary)', padding: '0.25rem' }}>
+      <button {...attributes} {...listeners} style={{ cursor: 'grab', background: 'none', border: 'none', color: 'var(--text-secondary)', padding: '0.25rem', touchAction: 'none' }}>
         <GripVertical size={14} />
       </button>
       <span style={{ color: 'var(--accent)', fontWeight: 500, minWidth: '24px', fontSize: '0.75rem' }}>{index + 1}</span>
@@ -273,7 +273,7 @@ export default function SetlistDetailPage() {
   const { success, error } = useToast()
 
   const sensors = useSensors(
-    useSensor(PointerSensor),
+    useSensor(PointerSensor, { activationConstraint: { distance: 0 } }),
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
   )
 
@@ -445,7 +445,7 @@ export default function SetlistDetailPage() {
         </div>
       ) : (
         <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-          <SortableContext items={songs.map(s => s.id)} strategy={verticalListSortingStrategy}>
+          <SortableContext items={songs.map(s => s.id)} strategy={verticalListSortingStrategy} style={{ touchAction: 'none' }}>
             {songs.map((song, index) => (
               <SortableSong key={song.id} song={song} index={index} onRemove={setRemoveSong} />
             ))}

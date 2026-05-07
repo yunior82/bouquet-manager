@@ -30,6 +30,7 @@ body {
   min-height: 100vh;
   letter-spacing: 1px;
   text-transform: uppercase;
+  overscroll-behavior: contain;
 }
 
 #root {
@@ -339,5 +340,11 @@ main {
   
   .modal {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    overscroll-behavior-y: contain;
   }
 }

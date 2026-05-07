@@ -4,8 +4,8 @@
   --bg-tertiary: #1f1f1f;
   --text-primary: #fafafa;
   --text-secondary: #a1a1a1;
-  --accent: #dc2626;
-  --accent-hover: #b91c1c;
+  --accent: #ef4444;
+  --accent-hover: #dc2626;
   --border: #333333;
   --success: #22c55e;
   --danger: #dc2626;
@@ -340,6 +340,15 @@ main {
   
   .modal {
     padding: 1rem;
+  }
+
+  .table-actions button {
+    padding: 0.3rem !important;
+  }
+  
+  .table-actions button svg {
+    width: 20px !important;
+    height: 20px !important;
   }
 }
 

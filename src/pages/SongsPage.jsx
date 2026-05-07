@@ -257,13 +257,13 @@ export default function SongsPage() {
                 <tr key={song.id}>
                   <td>{song.title}</td>
                   <td>{song.types?.type || '-'}</td>
-                  <td style={{ width: '80px' }}>
-                    <div style={{ display: 'flex', gap: '0.15rem', alignItems: 'center', justifyContent: 'center' }}>
-                      <button className="btn btn-ghost" onClick={() => { setEditingSong(song); setModalOpen(true) }} style={{ padding: '0.15rem' }}>
-                        <Edit size={14} />
+                  <td style={{ width: '90px' }}>
+                    <div className="table-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', justifyContent: 'center' }}>
+                      <button className="btn btn-ghost" onClick={() => { setEditingSong(song); setModalOpen(true) }} style={{ padding: '0.3rem' }}>
+                        <Edit size={20} />
                       </button>
-                      <button className="btn btn-ghost" onClick={() => setDeleteSong(song)} style={{ color: 'var(--danger)', padding: '0.15rem' }}>
-                        <Trash2 size={14} />
+                      <button className="btn btn-ghost" onClick={() => setDeleteSong(song)} style={{ color: 'var(--danger)', padding: '0.3rem' }}>
+                        <Trash2 size={20} />
                       </button>
                     </div>
                   </td>

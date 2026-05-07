@@ -263,25 +263,21 @@ export default function SetlistsPage() {
                       </Link>
                     </td>
                     <td>{format(new Date(setlist.date), 'dd/MM/yyyy')}</td>
+                    <td>{setlist.songCount}</td>
                     <td>
-                      <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                        <Music size={14} /> {setlist.songCount}
-                      </span>
-                    </td>
-<td>
-                      <div style={{ display: 'flex', gap: '0.15rem', alignItems: 'center', justifyContent: 'center' }}>
+                      <div className="table-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', justifyContent: 'center' }}>
                         <button
                           onClick={() => handleDuplicate(setlist)}
-                          style={{ background: 'none', border: 'none', color: 'var(--accent)', cursor: 'pointer', padding: '0.15rem' }}
+                          style={{ background: 'none', border: 'none', color: 'var(--accent)', cursor: 'pointer', padding: '0.25rem' }}
                           title="Duplicate"
                         >
-                          <Copy size={14} />
+                          <Copy size={18} />
                         </button>
                         <button
                           onClick={() => setDeleteSetlist(setlist)}
-                          style={{ background: 'none', border: 'none', color: 'var(--danger)', cursor: 'pointer', padding: '0.15rem' }}
+                          style={{ background: 'none', border: 'none', color: 'var(--danger)', cursor: 'pointer', padding: '0.25rem' }}
                         >
-                          <Trash2 size={14} />
+                          <Trash2 size={18} />
                         </button>
                       </div>
                     </td>

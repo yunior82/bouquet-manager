@@ -46,13 +46,13 @@ function SortableSong({ song, index, onRemove }) {
       }}
     >
       <button {...attributes} {...listeners} style={{ cursor: 'grab', background: 'none', border: 'none', color: 'var(--text-secondary)', padding: '0.25rem', touchAction: 'none' }}>
-        <GripVertical size={14} />
+        <GripVertical size={18} />
       </button>
-      <span style={{ color: 'var(--accent)', fontWeight: 500, minWidth: '24px', fontSize: '0.75rem' }}>{index + 1}</span>
+      <span style={{ color: 'var(--accent)', fontWeight: 500, minWidth: '28px', fontSize: '0.85rem' }}>{index + 1}</span>
       <span style={{ flex: 1, fontSize: '0.85rem' }}>{song.title}</span>
-      <span style={{ color: 'var(--text-secondary)', fontSize: '0.75rem' }}>{song.duration}</span>
+      <span style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>{song.duration}</span>
       <button onClick={() => onRemove(song.id)} style={{ background: 'none', border: 'none', color: 'var(--danger)', cursor: 'pointer', padding: '0.25rem' }}>
-        <Trash2 size={14} />
+        <Trash2 size={18} />
       </button>
     </div>
   )

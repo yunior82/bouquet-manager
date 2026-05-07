@@ -73,7 +73,7 @@ export default function Layout({ onLogout, user }) {
                 className="btn btn-ghost"
                 style={{ marginLeft: '0.5rem' }}
               >
-                Salir
+                See ya nerds
               </button>
             </nav>
           )}
@@ -117,7 +117,7 @@ export default function Layout({ onLogout, user }) {
             onClick={onLogout}
             className="btn btn-ghost"
           >
-            Salir
+            See ya nerds
           </button>
         </nav>
       )}
